@@ -87,8 +87,8 @@ return [
     'ordinal' => static function ($number, string $period = '') {
         $ordinal = [1 => 'èr', 2 => 'nd'][(int) $number] ?? 'en';
 
-        // feminine for year, week, hour, minute, second
-        if (preg_match('/^[yYwWhHgGis]$/', $period)) {
+        // feminine for week, hour, minute, second
+        if (preg_match('/^[wWhHgGis]$/', $period)) {
             $ordinal .= 'a';
         }
 
